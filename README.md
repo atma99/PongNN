@@ -1,0 +1,4 @@
+# PongNN
+Using neural networks and genetic algorithms to play PONG.
+
+Each member of the population is represented as a PONG paddle. Each paddle contains DNA encoded as a neural network that takes in the position of the paddle, ball, and speed of the ball as inputs, and predicts whether the paddle should move up, down, or remain still. The life of a member ends when the member fails to hit the ball upon its return. After all members miss the ball once, a new generation begins, reproducing and mutating from the previous generation. Currently reproduction simply copies the input and hidden weights, as well as biases, and then a mutation is applied to randomly change some of the values. If all members in a given generation fail to hit the ball at least once, the new generation will not reproduce from the previous generation, they will be randomly initialized to "reinvigorate" the population.
